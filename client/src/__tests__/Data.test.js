@@ -34,7 +34,6 @@ describe('fetchData', ()=>{
   
       const fakeData = []
       const spy = jest.spyOn(global, "fetch").mockImplementation(setupFetchStub(fakeData))
-    
   
       const json = await fetchData(dummyFiles)
       expect(spy).toHaveBeenCalledTimes(1);

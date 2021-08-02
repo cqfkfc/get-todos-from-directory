@@ -4,6 +4,35 @@ import { useDropzone } from "react-dropzone";
 import { fetchData } from '../utils/Data';
 import TodoResults from "./TodoResults";
 
+const baseStyle = {
+  flex: 1,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  padding: '20px',
+  borderWidth: 2,
+  borderRadius: 2,
+  borderColor: '#eeeeee',
+  borderStyle: 'dashed',
+  backgroundColor: '#fafafa',
+  color: '#bdbdbd',
+  outline: 'none',
+  transition: 'border .24s ease-in-out'
+};
+
+const activeStyle = {
+  borderColor: '#2196f3'
+};
+
+const acceptStyle = {
+  borderColor: '#00e676'
+};
+
+const rejectStyle = {
+  borderColor: '#ff1744'
+}; 
+
+
 // TODO: change the function name
 function SearchTodoFromFolder() {
   const [ filteredFiles, setFilteredFiles] = useState([])
@@ -16,35 +45,6 @@ function SearchTodoFromFolder() {
     isDragReject
   } = useDropzone({maxFiles: 1000});
 
-  const baseStyle = {
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '20px',
-    borderWidth: 2,
-    borderRadius: 2,
-    borderColor: '#eeeeee',
-    borderStyle: 'dashed',
-    backgroundColor: '#fafafa',
-    color: '#bdbdbd',
-    outline: 'none',
-    transition: 'border .24s ease-in-out'
-  };
-  
-  const activeStyle = {
-    borderColor: '#2196f3'
-  };
-  
-  const acceptStyle = {
-    borderColor: '#00e676'
-  };
-  
-  const rejectStyle = {
-    borderColor: '#ff1744'
-  }; 
-
-
   useEffect(()=>{
     fetchData(acceptedFiles).then(data=>setFilteredFiles(data.data));
   },[acceptedFiles])
@@ -56,8 +56,8 @@ function SearchTodoFromFolder() {
     ...(isDragReject ? rejectStyle : {})
   }), [
     isDragActive,
+    isDragAccept,
     isDragReject,
-    isDragAccept
   ]);
 
   return (
