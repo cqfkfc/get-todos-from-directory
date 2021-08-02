@@ -1,8 +1,9 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { useState, useEffect, useMemo } from "react";
 import { useDropzone } from "react-dropzone";
 import { fetchData } from '../utils/Data';
 import TodoResults from "./TodoResults";
+import InfoMessage from "./InfoMessage";
 
 const baseStyle = {
   flex: 1,
@@ -32,10 +33,13 @@ const rejectStyle = {
   borderColor: '#ff1744'
 }; 
 
+const maxFilesAllowed = 1000;
 
 // TODO: change the function name
 function SearchTodoFromFolder() {
-  const [ filteredFiles, setFilteredFiles] = useState([])
+  const [ filesWithTodo, setFilesWithTodo] = useState([])
+  const [ filesUploaded, setFilesUploaded] = useState(false); 
+  const infoMessage = 'The maximum number of files allowed is '+maxFilesAllowed+'.'
   const {
     acceptedFiles,
     getRootProps,
@@ -43,10 +47,15 @@ function SearchTodoFromFolder() {
     isDragActive,
     isDragAccept,
     isDragReject
-  } = useDropzone({maxFiles: 1000});
+  } = useDropzone({maxFiles: maxFilesAllowed});
 
   useEffect(()=>{
-    fetchData(acceptedFiles).then(data=>setFilteredFiles(data.data));
+    if (acceptedFiles.length !== 0) {
+      fetchData(acceptedFiles).then(data=>{
+        setFilesWithTodo(data.data)
+        setFilesUploaded(true)
+      });  
+    }
   },[acceptedFiles])
 
   const style = useMemo(() => ({
@@ -59,6 +68,8 @@ function SearchTodoFromFolder() {
     isDragAccept,
     isDragReject,
   ]);
+
+  const msg = `Out of the ${acceptedFiles.length} file${acceptedFiles.length>0 ? 's': ''} you uploaded, ${filesWithTodo.length} file${filesWithTodo.length>0 ? 's': ''} contained TODOS. `
 
   return (
     <Grid container>
@@ -74,7 +85,13 @@ function SearchTodoFromFolder() {
       </div>
 
       </Grid>
-      <TodoResults files={filteredFiles} />
+      {!filesUploaded && <InfoMessage message={infoMessage} />}
+      
+      
+      {filesUploaded && <Grid item xs={12}>
+        <TodoResults files={filesWithTodo} msg={msg} />
+      </Grid>}
+    
     </Grid>
     );
 }
