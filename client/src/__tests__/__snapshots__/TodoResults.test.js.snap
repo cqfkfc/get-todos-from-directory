@@ -4,6 +4,9 @@ exports[`todo results show correctly when there are 2 files 1`] = `
 <div
   data-testid="results"
 >
+  <h6
+    className="MuiTypography-root MuiTypography-subtitle1"
+  />
   <ul
     className="MuiList-root MuiList-padding"
   >
@@ -55,6 +58,9 @@ exports[`todo results show correctly when there are no files 1`] = `
 <div
   data-testid="results"
 >
+  <h6
+    className="MuiTypography-root MuiTypography-subtitle1"
+  />
   <ul
     className="MuiList-root MuiList-padding"
   />
