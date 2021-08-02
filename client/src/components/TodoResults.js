@@ -3,7 +3,6 @@ import { Folder } from '@material-ui/icons'
 
 // TODO: change the function name
 function TodoResults(props) {
-
   return (
       <div data-testid="results">
         <List>{props.files.map(file => (
