@@ -69,7 +69,7 @@ function SearchTodoFromFolder() {
     isDragReject,
   ]);
 
-  const msg = `Out of the ${acceptedFiles.length} file${acceptedFiles.length>0 ? 's': ''} you uploaded, ${filesWithTodo.length} file${filesWithTodo.length>0 ? 's': ''} contained TODOS. `
+  const msg = `Out of the ${acceptedFiles.length} file${acceptedFiles.length>1 ? 's': ''} you uploaded, ${filesWithTodo.length} file${filesWithTodo.length>1 ? 's': ''} contained TODOS. `
 
   return (
     <Grid container>

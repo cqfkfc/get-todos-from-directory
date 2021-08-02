@@ -1,5 +1,9 @@
 import { fetchData } from '../utils/Data';
 
+afterEach(() => {
+  global.fetch.mockClear();
+});
+
 function setupFetchStub(data) {
   return function fetchStub(_url) {
     return new Promise((resolve) => {
@@ -26,7 +30,6 @@ describe('fetchData', ()=>{
     const json = await fetchData(dummyFiles)
     expect(spy).toHaveBeenCalledTimes(1);
     expect(json).toEqual({ data: fakeData })
-    global.fetch.mockClear()
     })
 
     test('when there are no files', async()=>{
@@ -38,7 +41,6 @@ describe('fetchData', ()=>{
       const json = await fetchData(dummyFiles)
       expect(spy).toHaveBeenCalledTimes(1);
       expect(json).toEqual({ data: fakeData })
-      global.fetch.mockClear()
       })
   
   })
