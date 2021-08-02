@@ -1,5 +1,5 @@
 import renderer from 'react-test-renderer';
-import TodoResults from "./TodoResults"
+import TodoResults from "../components/TodoResults"
 
 describe('todo results show correctly', () => {
     test('when there are no files', ()=>{

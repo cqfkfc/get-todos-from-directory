@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core";
 import { useState, useEffect, useMemo } from "react";
 import { useDropzone } from "react-dropzone";
-import { fetchData } from '../utils/data';
+import { fetchData } from '../utils/Data';
 import TodoResults from "./TodoResults";
 
 // TODO: change the function name
@@ -46,7 +46,7 @@ function SearchTodoFromFolder() {
 
 
   useEffect(()=>{
-    fetchData(acceptedFiles).then(data=>setFilteredFiles(data));
+    fetchData(acceptedFiles).then(data=>setFilteredFiles(data.data));
   },[acceptedFiles])
 
   const style = useMemo(() => ({

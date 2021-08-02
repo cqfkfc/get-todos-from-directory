@@ -1,4 +1,4 @@
-import { fetchData } from './Data';
+import { fetchData } from '../utils/Data';
 
 function setupFetchStub(data) {
   return function fetchStub(_url) {
