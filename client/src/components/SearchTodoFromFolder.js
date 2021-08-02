@@ -60,13 +60,7 @@ function SearchTodoFromFolder() {
 
   const style = useMemo(() => ({
     ...baseStyle,
-    ...(isDragActive ? activeStyle : {}),
-    ...(isDragAccept ? acceptStyle : {}),
-    ...(isDragReject ? rejectStyle : {})
   }), [
-    isDragActive,
-    isDragAccept,
-    isDragReject,
   ]);
 
   const msg = `Out of the ${acceptedFiles.length} file${acceptedFiles.length>1 ? 's': ''} you uploaded, ${filesWithTodo.length} file${filesWithTodo.length>1 ? 's': ''} contained TODOS. `
