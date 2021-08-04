@@ -63,7 +63,6 @@ function SearchTodoFromFolder() {
   }), [
   ]);
 
-  const msg = `Out of the ${acceptedFiles.length} file${acceptedFiles.length>1 ? 's': ''} you uploaded, ${filesWithTodo.length} file${filesWithTodo.length>1 ? 's': ''} contained TODOS. `
 
   return (
     <Grid container>
@@ -83,7 +82,7 @@ function SearchTodoFromFolder() {
       
       
       {filesUploaded && <Grid item xs={12}>
-        <TodoResults files={filesWithTodo} msg={msg} />
+        <TodoResults files={filesWithTodo} inputFiles={acceptedFiles}/>
       </Grid>}
     
     </Grid>

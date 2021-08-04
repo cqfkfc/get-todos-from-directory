@@ -6,7 +6,18 @@ exports[`todo results show correctly when there are 2 files 1`] = `
 >
   <h6
     className="MuiTypography-root MuiTypography-subtitle1"
-  />
+    data-testid="msg-to-users"
+  >
+    Out of the 
+    2
+     file
+    s
+     you uploaded, 
+    2
+     file
+    s
+     contained TODOS.
+  </h6>
   <ul
     className="MuiList-root MuiList-padding"
   >
@@ -60,7 +71,18 @@ exports[`todo results show correctly when there are no files 1`] = `
 >
   <h6
     className="MuiTypography-root MuiTypography-subtitle1"
-  />
+    data-testid="msg-to-users"
+  >
+    Out of the 
+    0
+     file
+    
+     you uploaded, 
+    0
+     file
+    
+     contained TODOS.
+  </h6>
   <ul
     className="MuiList-root MuiList-padding"
   />

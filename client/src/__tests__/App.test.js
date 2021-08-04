@@ -42,5 +42,6 @@ test('results are loaded when files are uploaded', async() => {
   });
   fireEvent.drop(inputEl);
   expect(await screen.findByTestId("results")).toBeInTheDocument();
+  expect(await (await screen.findByTestId("msg-to-users")).textContent).toMatch('Out of the 1 file you uploaded, 2 files contained TODOS.');
 
-});
+})
