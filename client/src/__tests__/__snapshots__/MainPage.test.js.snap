@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ensure App Snapshot renders correctly 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <div
+      className="MuiPaper-root MuiCard-root MuiPaper-outlined MuiPaper-rounded"
+    >
+      <div
+        className="MuiCardHeader-root"
+      >
+        <div
+          className="MuiCardHeader-content"
+        >
+          <h2
+            className="MuiTypography-root MuiTypography-h2"
+          >
+            Welcome!
+          </h2>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root"
+      >
+        <div
+          className="MuiGrid-root MuiGrid-container"
+        >
+          <div
+            className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+          >
+            <div
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragEnter={[Function]}
+              onDragLeave={[Function]}
+              onDragOver={[Function]}
+              onDrop={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#fafafa",
+                  "borderColor": "#eeeeee",
+                  "borderRadius": 2,
+                  "borderStyle": "dashed",
+                  "borderWidth": 2,
+                  "color": "#bdbdbd",
+                  "display": "flex",
+                  "flex": 1,
+                  "flexDirection": "column",
+                  "outline": "none",
+                  "padding": "20px",
+                  "transition": "border .24s ease-in-out",
+                }
+              }
+              tabIndex={0}
+            >
+              <input
+                autoComplete="off"
+                data-testid="upload-folder"
+                multiple={true}
+                onChange={[Function]}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "display": "none",
+                  }
+                }
+                tabIndex={-1}
+                type="file"
+                webkitdirectory=""
+              />
+              <p>
+                Drag and drop your folder here to find files containing TODOs
+              </p>
+            </div>
+          </div>
+          <div
+            className="MuiPaper-root MuiAlert-root MuiAlert-standardInfo MuiPaper-elevation0"
+            role="alert"
+          >
+            <div
+              className="MuiAlert-icon"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20, 12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10, 10 0 0,0 12,2M11,17H13V11H11V17Z"
+                />
+              </svg>
+            </div>
+            <div
+              className="MuiAlert-message"
+            >
+              The maximum number of files allowed is 1000.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;

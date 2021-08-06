@@ -1,8 +1,8 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { useState, useEffect, useMemo } from "react";
 import { useDropzone } from "react-dropzone";
 import { fetchData } from '../utils/Data';
-import TodoResults from "./TodoResults";
+import DisplayFileResults from "./DisplayFileResults";
 import InfoMessage from "./InfoMessage";
 
 const baseStyle = {
@@ -36,10 +36,10 @@ const rejectStyle = {
 const maxFilesAllowed = 1000;
 
 // TODO: change the function name
-function SearchTodoFromFolder() {
+function Todo() {
   const [ filesWithTodo, setFilesWithTodo] = useState([])
   const [ filesUploaded, setFilesUploaded] = useState(false); 
-  const infoMessage = 'The maximum number of files allowed is '+maxFilesAllowed+'.'
+  const maxFilesAllowedMsg = 'The maximum number of files allowed is '+maxFilesAllowed+'.'
   const {
     acceptedFiles,
     getRootProps,
@@ -78,15 +78,15 @@ function SearchTodoFromFolder() {
       </div>
 
       </Grid>
-      {!filesUploaded && <InfoMessage message={infoMessage} />}
+      {!filesUploaded && <InfoMessage message={maxFilesAllowedMsg} />}
       
       
       {filesUploaded && <Grid item xs={12}>
-        <TodoResults files={filesWithTodo} inputFiles={acceptedFiles}/>
+        <DisplayFileResults outputFiles={filesWithTodo} inputFiles={acceptedFiles}/>
       </Grid>}
     
     </Grid>
     );
 }
 
-export default SearchTodoFromFolder;
+export default Todo;

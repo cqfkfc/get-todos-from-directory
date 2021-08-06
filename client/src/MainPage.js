@@ -1,8 +1,7 @@
-import './App.css';
-import SearchTodoFromFolder from './components/SearchTodoFromFolder';
+import SearchTodoFromFolder from './components/Todo';
 import { Card, CardContent, CardHeader, Typography } from '@material-ui/core';
 
-function App() {
+function MainPage() {
   return (
     // TODO: remove app classname
     <div className="App">
@@ -25,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default MainPage;

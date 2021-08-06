@@ -1,11 +1,11 @@
 import renderer from 'react-test-renderer';
-import TodoResults from "../components/TodoResults"
+import DisplayFileResults from "../components/DisplayFileResults"
 
 describe('todo results show correctly', () => {
     test('when there are no files', ()=>{
         const dummyFiles = []
         const tree = renderer
-            .create(<TodoResults files={dummyFiles} inputFiles={dummyFiles}/>)
+            .create(<DisplayFileResults outputFiles={dummyFiles} inputFiles={dummyFiles}/>)
             .toJSON();
             expect(tree).toMatchSnapshot()
     })
@@ -13,7 +13,7 @@ describe('todo results show correctly', () => {
     test('when there are 2 files', ()=>{
         const dummyFiles = ['PositiveFile1.js','PositiveFile2.js']
         const tree = renderer
-            .create(<TodoResults files={dummyFiles} inputFiles={dummyFiles}/>)
+            .create(<DisplayFileResults outputFiles={dummyFiles} inputFiles={dummyFiles}/>)
             .toJSON();
             expect(tree).toMatchSnapshot()
     })
