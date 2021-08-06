@@ -2,7 +2,11 @@
 
 exports[`Ensure App Snapshot renders correctly 1`] = `
 <div
-  className="App"
+  style={
+    Object {
+      "padding": "100px",
+    }
+  }
 >
   <header
     className="App-header"

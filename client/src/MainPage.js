@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, Typography } from '@material-ui/core';
 function MainPage() {
   return (
     // TODO: remove app classname
-    <div className="App">
+    <div style={{padding: '100px'}}>
       <header className="App-header">
         {/* TODO: beautify this page */}
 
