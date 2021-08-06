@@ -10,7 +10,7 @@
 
 ## To test the client (Jest)
 
-`npm test`
+`cd client` `npm test`
 
 # Screenshots
 
