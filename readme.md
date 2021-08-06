@@ -14,12 +14,12 @@
 
 # Screenshots
 
-![image-20210806092830157](C:\Users\Qinfang\AppData\Roaming\Typora\typora-user-images\image-20210806092830157.png)
+![image-20210806092830157](.\imgs\image-20210806092830157.png)
 
 
 
-![image-20210806092752049](C:\Users\Qinfang\AppData\Roaming\Typora\typora-user-images\image-20210806092752049.png)
+![image-20210806092752049](.\imgs\image-20210806092752049.png)
 
 # Testing
 
-![image-20210806093103200](C:\Users\Qinfang\AppData\Roaming\Typora\typora-user-images\image-20210806093103200.png)
+![image-20210806093103200](.\imgs\image-20210806093103200.png)
