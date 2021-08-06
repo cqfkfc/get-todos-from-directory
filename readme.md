@@ -14,12 +14,12 @@
 
 # Screenshots
 
-![image-20210806092830157](.\imgs\image-20210806092830157.png)
+![image-20210806092830157](https://raw.githubusercontent.com/cqfkfc/get-todos-from-directory/main/imgs/image-20210806092830157.png)
 
 
 
-![image-20210806092752049](.\imgs\image-20210806092752049.png)
+![image-20210806092752049](https://raw.githubusercontent.com/cqfkfc/get-todos-from-directory/main/imgs/image-20210806092752049.png)
 
 # Testing
 
-![image-20210806093103200](.\imgs\image-20210806093103200.png)
+![image-20210806093103200](https://raw.githubusercontent.com/cqfkfc/get-todos-from-directory/main/imgs/image-20210806093103200.png)
