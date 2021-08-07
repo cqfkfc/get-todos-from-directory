@@ -27,8 +27,10 @@ const maxFilesAllowed = 1000;
 function Todo() {
   const [filesWithTodo, setFilesWithTodo] = useState([]);
   const [filesUploaded, setFilesUploaded] = useState(false);
-  const maxFilesAllowedMsg =
-    "The maximum number of files allowed is " + maxFilesAllowed + ".";
+  const message =
+    "Max number of files allowed is " +
+    maxFilesAllowed +
+    ". Supported for Google Chrome and Firefox (Desktop)";
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
     maxFiles: maxFilesAllowed,
   });
@@ -65,7 +67,7 @@ function Todo() {
           <p>Drag and drop your folder here to find files containing TODOs</p>
         </div>
       </Grid>
-      {!filesUploaded && <InfoMessage message={maxFilesAllowedMsg} />}
+      {!filesUploaded && <InfoMessage message={message} />}
 
       {filesUploaded && (
         <Grid item xs={12}>

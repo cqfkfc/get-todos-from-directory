@@ -107,7 +107,7 @@ exports[`Ensure main page renders correctly when no files are uploaded 1`] = `
             <div
               className="MuiAlert-message"
             >
-              The maximum number of files allowed is 1000.
+              Max number of files allowed is 1000. Supported for Google Chrome and Firefox (Desktop)
             </div>
           </div>
         </div>
