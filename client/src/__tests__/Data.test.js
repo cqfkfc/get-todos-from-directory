@@ -37,10 +37,25 @@ describe('fetchData', ()=>{
 
       const spy = jest.spyOn(global, "fetch").mockImplementation(setupFetchStub(expectedOutput))
     
-
       const json = await fetchData(dummyInputFiles)
       expect(spy).toHaveBeenCalledTimes(1);
       expect(json).toEqual({ data: expectedOutput })
-    })  
+    })
+    
+    test('works with 2 file types', async()=>{
+      const textFile = new File(['TODO Exist'], "file.txt", { type: "application/txt" });
+      const imgFile = new File(['TODO Exist'], "file.jpg", { type: "image/jpg" });
+      const dummyInputFiles = [textFile, imgFile]
+      const expectedOutput = ['file1.txt', 'file2.txt']
+
+      const spy = jest.spyOn(global, "fetch").mockImplementation(setupFetchStub(expectedOutput))
+
+      const json = await fetchData(dummyInputFiles)
+
+      // should work even if an image is uploaded. For nodeJS, it will not contain TODOs text.
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(json).toEqual({ data: expectedOutput })
+    })
+
   })
 
