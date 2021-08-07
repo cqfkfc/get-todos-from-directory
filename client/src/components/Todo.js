@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core";
 import { useState, useEffect, useMemo } from "react";
 import { useDropzone } from "react-dropzone";
-import { fetchData } from "../utils/Data";
+import { fetchData } from "../utils/data";
 import DisplayFileResults from "./DisplayFileResults";
 import InfoMessage from "./InfoMessage";
 

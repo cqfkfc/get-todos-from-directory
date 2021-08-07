@@ -1,4 +1,4 @@
-import { fetchData } from "../utils/Data";
+import { fetchData } from "../utils/data";
 
 afterEach(() => {
   global.fetch.mockClear();
