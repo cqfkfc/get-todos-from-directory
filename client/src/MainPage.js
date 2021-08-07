@@ -1,24 +1,17 @@
-import SearchTodoFromFolder from './components/Todo';
-import { Card, CardContent, CardHeader, Typography } from '@material-ui/core';
+import SearchTodoFromFolder from "./components/Todo";
+import { Card, CardContent, CardHeader, Typography } from "@material-ui/core";
 
 function MainPage() {
   return (
-    // TODO: remove app classname
-    <div style={{padding: '100px'}}>
+    // TODO: beautify page
+    <div style={{ padding: "100px" }}>
       <header className="App-header">
-        {/* TODO: beautify this page */}
-
         <Card variant="outlined">
-          <CardHeader 
-          title={<Typography variant="h2">Welcome!</Typography>}
-          />
+          <CardHeader title={<Typography variant="h2">Welcome!</Typography>} />
           <CardContent>
-          <SearchTodoFromFolder />
-
+            <SearchTodoFromFolder />
           </CardContent>
         </Card>
-
-
       </header>
     </div>
   );
