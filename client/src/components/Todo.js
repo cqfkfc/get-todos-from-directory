@@ -21,18 +21,6 @@ const baseStyle = {
   transition: 'border .24s ease-in-out'
 };
 
-const activeStyle = {
-  borderColor: '#2196f3'
-};
-
-const acceptStyle = {
-  borderColor: '#00e676'
-};
-
-const rejectStyle = {
-  borderColor: '#ff1744'
-}; 
-
 const maxFilesAllowed = 1000;
 
 // TODO: change the function name
@@ -44,9 +32,6 @@ function Todo() {
     acceptedFiles,
     getRootProps,
     getInputProps,
-    isDragActive,
-    isDragAccept,
-    isDragReject
   } = useDropzone({maxFiles: maxFilesAllowed});
 
   useEffect(()=>{
@@ -60,16 +45,14 @@ function Todo() {
 
   const style = useMemo(() => ({
     ...baseStyle,
-  }), [
-  ]);
-
+  }), []);
 
   return (
     <Grid container>
       <Grid item xs={12}>
       <div {...getRootProps({style})}>
         
-        <input 
+        <input
         data-testid="upload-folder"
         webkitdirectory="" // this attribute enables upload of directory instead of file
         {...getInputProps()} 
