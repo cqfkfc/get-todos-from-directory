@@ -4,6 +4,7 @@ afterEach(() => {
   global.fetch.mockClear();
 });
 
+
 function setupFetchStub(data) {
   return function fetchStub(_url) {
     return new Promise((resolve) => {
@@ -19,29 +20,27 @@ function setupFetchStub(data) {
 
 
 describe('fetchData', ()=>{
-  test('works with 2 files', async()=>{
-    const file = new File(['TODO Exist'], "file.txt", { type: "application/txt" });
-    const dummyFiles = [file, file]
+  test('works with no files', async()=>{
+    const dummyInputFiles = []
+    const expectedOutput = []
+    const spy = jest.spyOn(global, "fetch").mockImplementation(setupFetchStub(expectedOutput))
 
-    const fakeData = ['file1.txt', 'file2.txt']
-    const spy = jest.spyOn(global, "fetch").mockImplementation(setupFetchStub(fakeData))
-  
-
-    const json = await fetchData(dummyFiles)
+    const json = await fetchData(dummyInputFiles)
     expect(spy).toHaveBeenCalledTimes(1);
-    expect(json).toEqual({ data: fakeData })
+    expect(json).toEqual({ data: expectedOutput })
     })
 
-    test('when there are no files', async()=>{
-      const dummyFiles = []
-  
-      const fakeData = []
-      const spy = jest.spyOn(global, "fetch").mockImplementation(setupFetchStub(fakeData))
-  
-      const json = await fetchData(dummyFiles)
+    test('works with 2 files', async()=>{
+      const file = new File(['TODO Exist'], "file.txt", { type: "application/txt" });
+      const dummyInputFiles = [file, file]
+      const expectedOutput = ['file1.txt', 'file2.txt']
+
+      const spy = jest.spyOn(global, "fetch").mockImplementation(setupFetchStub(expectedOutput))
+    
+
+      const json = await fetchData(dummyInputFiles)
       expect(spy).toHaveBeenCalledTimes(1);
-      expect(json).toEqual({ data: fakeData })
-      })
-  
+      expect(json).toEqual({ data: expectedOutput })
+    })  
   })
 

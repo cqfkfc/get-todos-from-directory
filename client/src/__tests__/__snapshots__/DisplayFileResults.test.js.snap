@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`todo results show correctly when there are 2 files 1`] = `
+exports[`File results displayed correctly when there are 2 files 1`] = `
 <div
   data-testid="results"
 >
@@ -65,7 +65,7 @@ exports[`todo results show correctly when there are 2 files 1`] = `
 </div>
 `;
 
-exports[`todo results show correctly when there are no files 1`] = `
+exports[`File results displayed correctly when there are no files 1`] = `
 <div
   data-testid="results"
 >

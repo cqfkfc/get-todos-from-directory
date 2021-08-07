@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import DisplayFileResults from "../components/DisplayFileResults"
 
-describe('todo results show correctly', () => {
+describe('File results displayed correctly', () => {
     test('when there are no files', ()=>{
         const dummyFiles = []
         const tree = renderer
