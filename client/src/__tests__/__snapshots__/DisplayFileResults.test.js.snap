@@ -12,7 +12,8 @@ exports[`File results displayed correctly when there are 2 files 1`] = `
     2
      file
     s
-     you uploaded, 
+     
+    you uploaded, 
     2
      file
     s
@@ -77,7 +78,8 @@ exports[`File results displayed correctly when there are no files 1`] = `
     0
      file
     
-     you uploaded, 
+     
+    you uploaded, 
     0
      file
     
