@@ -55,10 +55,11 @@ function Todo() {
         <div {...getRootProps({ style })}>
           <input
             data-testid="upload-folder"
-            multiple=""
-            directory=""
             type="file"
-            webkitdirectory="" // this attribute enables upload of directory instead of file
+            multiple
+            directory // this attribute enables upload of directory instead of file
+            mozdirectory // this attribute enables upload of directory instead of file
+            webkitdirectory // this attribute enables upload of directory instead of file
             {...getInputProps()}
           />
           <p>Drag and drop your folder here to find files containing TODOs</p>

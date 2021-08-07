@@ -67,7 +67,8 @@ exports[`Ensure main page renders correctly when no files are uploaded 1`] = `
               <input
                 autoComplete="off"
                 data-testid="upload-folder"
-                directory=""
+                directory={true}
+                mozdirectory={true}
                 multiple={true}
                 onChange={[Function]}
                 onClick={[Function]}
@@ -78,7 +79,7 @@ exports[`Ensure main page renders correctly when no files are uploaded 1`] = `
                 }
                 tabIndex={-1}
                 type="file"
-                webkitdirectory=""
+                webkitdirectory={true}
               />
               <p>
                 Drag and drop your folder here to find files containing TODOs
