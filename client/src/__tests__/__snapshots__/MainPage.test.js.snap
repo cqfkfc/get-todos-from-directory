@@ -4,9 +4,7 @@ exports[`Ensure main page renders correctly when no files are uploaded 1`] = `
 <div
   style={
     Object {
-      "paddingLeft": "3vw",
-      "paddingRight": "3vw",
-      "paddingTop": "5vh",
+      "padding": "3vh",
     }
   }
 >

@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, Typography } from "@material-ui/core";
 function MainPage() {
   return (
     // TODO: beautify page
-    <div style={{ paddingLeft: "3vw", paddingTop: "5vh", paddingRight: "3vw" }}>
+    <div style={{ padding: "3vh" }}>
       <header className="App-header">
         <Card variant="outlined">
           <CardHeader title={<Typography variant="h3">Welcome!</Typography>} />
