@@ -55,6 +55,9 @@ function Todo() {
         <div {...getRootProps({ style })}>
           <input
             data-testid="upload-folder"
+            multiple=""
+            directory=""
+            type="file"
             webkitdirectory="" // this attribute enables upload of directory instead of file
             {...getInputProps()}
           />

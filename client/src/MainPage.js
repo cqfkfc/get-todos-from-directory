@@ -7,7 +7,7 @@ function MainPage() {
     <div style={{ padding: "100px" }}>
       <header className="App-header">
         <Card variant="outlined">
-          <CardHeader title={<Typography variant="h2">Welcome!</Typography>} />
+          <CardHeader title={<Typography variant="h3">Welcome!</Typography>} />
           <CardContent>
             <SearchTodoFromFolder />
           </CardContent>

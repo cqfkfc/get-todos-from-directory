@@ -20,11 +20,11 @@ exports[`Ensure main page renders correctly when no files are uploaded 1`] = `
         <div
           className="MuiCardHeader-content"
         >
-          <h2
-            className="MuiTypography-root MuiTypography-h2"
+          <h3
+            className="MuiTypography-root MuiTypography-h3"
           >
             Welcome!
-          </h2>
+          </h3>
         </div>
       </div>
       <div
@@ -67,6 +67,7 @@ exports[`Ensure main page renders correctly when no files are uploaded 1`] = `
               <input
                 autoComplete="off"
                 data-testid="upload-folder"
+                directory=""
                 multiple={true}
                 onChange={[Function]}
                 onClick={[Function]}
