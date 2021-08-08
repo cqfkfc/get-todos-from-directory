@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid, LinearProgress } from "@material-ui/core";
 import { useState, useEffect, useMemo } from "react";
 import { useDropzone } from "react-dropzone";
 import { fetchData } from "../utils/data";
@@ -27,6 +27,8 @@ const maxFilesAllowed = 1000;
 function Todo() {
   const [filesWithTodo, setFilesWithTodo] = useState([]);
   const [filesUploaded, setFilesUploaded] = useState(false);
+  const [fetching, setFetching] = useState(false);
+
   const message =
     "Max number of files allowed is " +
     maxFilesAllowed +
@@ -35,9 +37,11 @@ function Todo() {
 
   useEffect(() => {
     if (acceptedFiles.length !== 0) {
+      setFetching(true);
       fetchData(acceptedFiles.slice(0, maxFilesAllowed)).then((data) => {
         setFilesWithTodo(data.data);
         setFilesUploaded(true);
+        setFetching(false);
       });
     }
   }, [acceptedFiles]);
@@ -52,6 +56,7 @@ function Todo() {
   return (
     <Grid container>
       <Grid item xs={12}>
+        {fetching && <LinearProgress />}
         <div {...getRootProps({ style })}>
           <input
             data-testid="upload-folder"
