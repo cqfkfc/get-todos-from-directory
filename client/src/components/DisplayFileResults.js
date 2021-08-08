@@ -7,10 +7,11 @@ function DisplayFileResults(props) {
 
   return (
     <div data-testid="results">
-      <Typography data-testid="msg-to-users" variant="subtitle1">
-        Out of the {inputFiles.length} file{inputFiles.length > 1 ? "s" : ""}{" "}
-        you uploaded, {outputFiles.length} file
-        {outputFiles.length > 1 ? "s" : ""} contained TODOS.
+      <Typography data-testid="msg-to-users" variant="h5">
+        Out of the {inputFiles.length ? inputFiles.length : "no"} file
+        {inputFiles.length === 1 ? "" : "s"} you uploaded,{" "}
+        {outputFiles.length ? outputFiles.length : "no"} file
+        {outputFiles.length === 1 ? "" : "s"} contained TODOs.
       </Typography>
       <List>
         {props.outputFiles.map((outputFile) => (

@@ -70,10 +70,10 @@ function Todo() {
           <p>Drag and drop your folder here to find files containing TODOs</p>
         </div>
       </Grid>
-      {!filesUploaded && <InfoMessage message={message} />}
+      <InfoMessage message={message} />
 
       {filesUploaded && (
-        <Grid item xs={12}>
+        <Grid item xs={12} style={{ padding: "3rem" }}>
           <DisplayFileResults
             outputFiles={filesWithTodo}
             inputFiles={acceptedFiles.slice(0, maxFilesAllowed)}

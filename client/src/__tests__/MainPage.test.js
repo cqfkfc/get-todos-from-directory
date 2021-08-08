@@ -48,7 +48,7 @@ describe("Ensure main page renders correctly", () => {
     expect(await screen.findByTestId("results")).toBeInTheDocument();
     expect(mockedFetchFunction).toHaveBeenCalledTimes(1);
     const expectedMsgToUsers =
-      "Out of the 1 file you uploaded, 1 file contained TODOS.";
+      "Out of the 1 file you uploaded, 1 file contained TODOs.";
     expect(
       await (
         await screen.findByTestId("msg-to-users")
@@ -79,7 +79,7 @@ describe("Ensure main page renders correctly", () => {
     expect(await screen.findByTestId("results")).toBeInTheDocument();
     expect(mockedFetchFunction).toHaveBeenCalledTimes(1);
     const expectedMsgToUsers =
-      "Out of the 1000 files you uploaded, 2 files contained TODOS.";
+      "Out of the 1000 files you uploaded, 2 files contained TODOs.";
     expect(
       await (
         await screen.findByTestId("msg-to-users")

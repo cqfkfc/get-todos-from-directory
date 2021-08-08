@@ -1,26 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1628393671452" clover="3.2.0">
-  <project timestamp="1628393671452" name="All files">
-    <metrics statements="17" coveredstatements="17" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4" elements="29" coveredelements="29" complexity="0" loc="17" ncloc="17" packages="1" files="1" classes="1"/>
-    <file name="Todo.js" path="D:\govtech interview homework\ERN stack in git\get-todos-from-directory\client\src\components\Todo.js">
-      <metrics statements="17" coveredstatements="17" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
-      <line num="8" count="1" type="stmt"/>
-      <line num="24" count="1" type="stmt"/>
-      <line num="28" count="15" type="stmt"/>
-      <line num="29" count="15" type="stmt"/>
-      <line num="30" count="15" type="stmt"/>
-      <line num="33" count="15" type="stmt"/>
-      <line num="36" count="15" type="stmt"/>
-      <line num="38" count="15" type="stmt"/>
-      <line num="39" count="5" type="cond" truecount="2" falsecount="0"/>
-      <line num="40" count="2" type="stmt"/>
-      <line num="41" count="2" type="stmt"/>
-      <line num="42" count="2" type="stmt"/>
-      <line num="43" count="2" type="stmt"/>
-      <line num="44" count="2" type="stmt"/>
-      <line num="49" count="15" type="stmt"/>
-      <line num="50" count="3" type="stmt"/>
-      <line num="56" count="15" type="stmt"/>
-    </file>
+<coverage generated="1628396042159" clover="3.2.0">
+  <project timestamp="1628396042160" name="All files">
+    <metrics statements="33" coveredstatements="33" conditionals="20" coveredconditionals="20" methods="11" coveredmethods="11" elements="64" coveredelements="64" complexity="0" loc="33" ncloc="33" packages="3" files="5" classes="5"/>
+    <package name="src">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="MainPage.js" path="D:\govtech interview homework\ERN stack in git\get-todos-from-directory\client\src\MainPage.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="21" coveredstatements="21" conditionals="14" coveredconditionals="14" methods="7" coveredmethods="7"/>
+      <file name="DisplayFileResults.js" path="D:\govtech interview homework\ERN stack in git\get-todos-from-directory\client\src\components\DisplayFileResults.js">
+        <metrics statements="3" coveredstatements="3" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+      </file>
+      <file name="InfoMessage.js" path="D:\govtech interview homework\ERN stack in git\get-todos-from-directory\client\src\components\InfoMessage.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="15" type="stmt"/>
+      </file>
+      <file name="Todo.js" path="D:\govtech interview homework\ERN stack in git\get-todos-from-directory\client\src\components\Todo.js">
+        <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="4" coveredmethods="4"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="28" count="15" type="stmt"/>
+        <line num="29" count="15" type="stmt"/>
+        <line num="30" count="15" type="stmt"/>
+        <line num="33" count="15" type="stmt"/>
+        <line num="36" count="15" type="stmt"/>
+        <line num="38" count="15" type="stmt"/>
+        <line num="39" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="49" count="15" type="stmt"/>
+        <line num="50" count="3" type="stmt"/>
+        <line num="56" count="15" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+      <file name="data.js" path="D:\govtech interview homework\ERN stack in git\get-todos-from-directory\client\src\utils\data.js">
+        <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="2" count="5" type="stmt"/>
+        <line num="3" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="1005" type="stmt"/>
+        <line num="10" count="1005" type="stmt"/>
+        <line num="13" count="1005" type="cond" truecount="4" falsecount="0"/>
+        <line num="14" count="1004" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
