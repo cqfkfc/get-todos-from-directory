@@ -32,7 +32,7 @@ function Todo() {
   const message =
     "Max number of files allowed is " +
     maxFilesAllowed +
-    ". Supported for Google Chrome and Firefox (Desktop)";
+    ". Supported for Google Chrome (Desktop) and Firefox (Desktop).";
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone({});
 
   useEffect(() => {
