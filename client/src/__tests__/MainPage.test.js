@@ -75,6 +75,7 @@ describe("Ensure main page renders correctly", () => {
     });
 
     fireEvent.drop(inputElement);
+
     expect(await screen.findByTestId("results")).toBeInTheDocument();
     expect(mockedFetchFunction).toHaveBeenCalledTimes(1);
     const expectedMsgToUsers =

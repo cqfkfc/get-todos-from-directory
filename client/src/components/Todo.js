@@ -31,13 +31,11 @@ function Todo() {
     "Max number of files allowed is " +
     maxFilesAllowed +
     ". Supported for Google Chrome and Firefox (Desktop)";
-  const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
-    maxFiles: maxFilesAllowed,
-  });
+  const { acceptedFiles, getRootProps, getInputProps } = useDropzone({});
 
   useEffect(() => {
     if (acceptedFiles.length !== 0) {
-      fetchData(acceptedFiles).then((data) => {
+      fetchData(acceptedFiles.slice(0, maxFilesAllowed)).then((data) => {
         setFilesWithTodo(data.data);
         setFilesUploaded(true);
       });
@@ -73,7 +71,7 @@ function Todo() {
         <Grid item xs={12}>
           <DisplayFileResults
             outputFiles={filesWithTodo}
-            inputFiles={acceptedFiles}
+            inputFiles={acceptedFiles.slice(0, maxFilesAllowed)}
           />
         </Grid>
       )}
